@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { Product } from '../types/Product';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/api', // 👉 .env로 분리 권장
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     headers: {
         'Content-Type': 'application/json',
     },
